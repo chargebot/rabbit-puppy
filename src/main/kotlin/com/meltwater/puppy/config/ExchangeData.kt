@@ -1,6 +1,6 @@
 package com.meltwater.puppy.config
 
-enum class ExchangeType { MISSING, direct, topic, fanout, headers }
+enum class ExchangeType { MISSING, direct, topic, fanout, headers, `x-delayed-message` }
 
 data class ExchangeData(var type: ExchangeType = ExchangeType.MISSING,
                         var durable: Boolean = true,
